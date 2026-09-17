@@ -1,0 +1,50 @@
+/* Pointer-driven details, with native touch and keyboard behavior preserved. */
+.fx-spotlight{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(320px circle at var(--fx-x,50%) var(--fx-y,50%),#b5fa5922,transparent 70%);transition:opacity .35s;z-index:1}
+.linkedin-card .fx-spotlight{background:radial-gradient(260px circle at var(--fx-x,50%) var(--fx-y,50%),#65b8ff25,transparent 70%)}
+.fx-tilt{transform-style:preserve-3d;will-change:auto}
+.fx-tilt.is-hovered{will-change:transform}
+.button,.outline-button,.text-link,.github-strip,.focus-tags>span,.resume-tag,.resume-item,.theme-button,.motion-button,.avatar-initials{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,color .25s,background .35s}
+.button-primary,.outline-button{position:relative;overflow:hidden;isolation:isolate}
+.button-primary::before,.outline-button::before{content:'';position:absolute;inset:-60% -30%;background:linear-gradient(110deg,transparent 38%,#ffffff60 48%,transparent 58%);transform:translateX(-110%) skewX(-15deg);pointer-events:none;z-index:-1}
+.button-primary>span,.outline-button>span,.github-strip>span:last-child,.hero-foot>a>span{display:inline-block;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.text-link{position:relative;display:inline-block}
+.text-link::after{content:'';position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.button:focus-visible,.outline-button:focus-visible,.text-link:focus-visible,.github-strip:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+.text-link:focus-visible::after{transform:scaleX(1)}
+@media(hover:hover) and (pointer:fine){
+ html:not(.motion-paused) .fx-tilt.is-hovered{transform:perspective(1100px) translateY(-5px) rotateX(var(--fx-rx,0deg)) rotateY(var(--fx-ry,0deg));transition:transform .12s ease-out,border-color .35s,box-shadow .35s;box-shadow:0 22px 65px #0003,0 0 28px #b5fa590c;border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+ html:not(.motion-paused) .fx-tilt.is-hovered .fx-spotlight{opacity:1}
+ html:not(.motion-paused) .identity-art.is-hovered .cosmic-monogram{text-shadow:0 0 45px #b5fa5980;transition:text-shadow .35s}
+ html:not(.motion-paused) .button:hover:not(:disabled),html:not(.motion-paused) .outline-button:hover{transform:translate(var(--fx-mx,0px),var(--fx-my,-3px));box-shadow:0 10px 30px #b5fa5928}
+ html:not(.motion-paused) .button-primary:hover::before,html:not(.motion-paused) .outline-button:hover::before{animation:fxSweep .75s ease-out}
+ html:not(.motion-paused) .button:hover>span,html:not(.motion-paused) .outline-button:hover>span{transform:translate(4px,-3px)}
+ html:not(.motion-paused) .text-link:hover{transform:translateY(-3px);color:var(--accent)}
+ .text-link:hover::after{transform:scaleX(1)}
+ html:not(.motion-paused) .github-strip:hover{transform:translateY(-4px);box-shadow:0 14px 35px #b5fa590e;border-color:var(--accent)}
+ html:not(.motion-paused) .github-strip:hover>span:last-child{transform:translateX(6px)}
+ html:not(.motion-paused) .focus-tags>span:hover,html:not(.motion-paused) .resume-tag:hover{transform:translateY(-5px) rotate(-2deg);border-color:var(--accent);color:var(--accent);box-shadow:0 7px 18px #b5fa5915}
+ html:not(.motion-paused) .resume-item:hover{transform:translateX(5px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+ html:not(.motion-paused) .theme-button:hover,html:not(.motion-paused) .motion-button:hover{transform:rotate(12deg) scale(1.08);box-shadow:0 0 22px #b5fa5915}
+ html:not(.motion-paused) .avatar-initials:hover{transform:rotate(-6deg) scale(1.08);box-shadow:0 8px 28px #b5fa5933}
+ html:not(.motion-paused) .header nav a:hover{color:var(--accent)}
+ html:not(.motion-paused) .hero-foot>a:hover>span{transform:translateY(5px)}
+}
+@keyframes fxSweep{from{transform:translateX(-110%) skewX(-15deg)}to{transform:translateX(110%) skewX(-15deg)}}
+.motion-paused .fx-spotlight{display:none}.motion-paused .fx-tilt,.motion-paused .button,.motion-paused .outline-button,.motion-paused .text-link,.motion-paused .resume-item{transform:none!important}.motion-paused .button-primary::before,.motion-paused .outline-button::before{display:none}
+@media(prefers-reduced-motion:reduce){.fx-spotlight{display:none}.fx-tilt,.button,.outline-button,.text-link,.github-strip,.focus-tags>span,.resume-tag,.resume-item,.theme-button,.motion-button,.avatar-initials{transform:none!important}.button-primary::before,.outline-button::before{display:none}}
+@media print{.fx-spotlight{display:none}}
+.fx-tap{position:relative;overflow:hidden;isolation:isolate}
+.fx-ripple{position:absolute;left:var(--tap-x);top:var(--tap-y);width:var(--tap-size);height:var(--tap-size);border-radius:50%;background:radial-gradient(circle,#b5fa5935,transparent 70%);transform:translate(-50%,-50%) scale(0);animation:fxRipple .6s ease-out forwards;pointer-events:none;z-index:2}
+.button-primary .fx-ripple{background:radial-gradient(circle,#ffffff90,transparent 70%)}
+@keyframes fxRipple{to{transform:translate(-50%,-50%) scale(1);opacity:0}}
+@media(max-width:760px) and (prefers-reduced-motion:no-preference){
+ html:not(.motion-paused) .fx-mobile-reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1);transition-delay:var(--reveal-delay,0ms)}
+ html:not(.motion-paused) .fx-mobile-reveal.fx-entered{opacity:1;transform:none}
+ html:not(.motion-paused) .button:active:not(:disabled),html:not(.motion-paused) .outline-button:active,html:not(.motion-paused) .linkedin-card:active{transform:scale(.98);transition:transform .15s ease}
+ html:not(.motion-paused) .card:active{border-color:var(--accent);box-shadow:0 0 24px #b5fa5915}
+ html:not(.motion-paused) .hero-copy{animation:fxMobileWelcome .85s cubic-bezier(.2,.8,.2,1) both}
+ html:not(.motion-paused) .hero-actions{animation:fxMobileWelcome .85s .15s cubic-bezier(.2,.8,.2,1) both}
+}
+@keyframes fxMobileWelcome{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.motion-paused .fx-mobile-reveal{opacity:1!important;transform:none!important}.motion-paused .fx-ripple{display:none}
+@media(prefers-reduced-motion:reduce){.fx-mobile-reveal{opacity:1!important;transform:none!important}.fx-ripple{display:none}}
