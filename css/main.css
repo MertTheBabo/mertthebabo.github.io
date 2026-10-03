@@ -593,7 +593,7 @@ footer .mee-logo{width:112px}
 @media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
   html:not(.motion-paused) .project-card:hover .project-shot img{transform:translateY(-8px)}
 }
-/* 5.3: AKTİF BÖLÜM NUMARASI KURALI BURAYA */
+.section.is-current>.eyebrow,.section.is-current .section-heading .eyebrow,.section.is-current .section-marker>span:first-child{color:var(--accent)}
 
 /* === 404 sayfası (404.html) === */
 .not-found{min-height:calc(100vh - 88px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:60px 0}
