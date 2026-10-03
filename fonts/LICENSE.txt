@@ -1,0 +1,6 @@
+Manrope ve Space Grotesk fontları, telif hakları kendi proje yazarlarına ait olmak üzere
+SIL Open Font License 1.1 ile lisanslıdır: https://openfontlicense.org
+
+Dosyalar Google Fonts'tan (fonts.gstatic.com) alındı; yalnızca latin ve latin-ext alt kümeleri.
+- Manrope: https://fonts.google.com/specimen/Manrope
+- Space Grotesk: https://fonts.google.com/specimen/Space+Grotesk
