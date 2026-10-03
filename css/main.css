@@ -576,6 +576,11 @@ footer .mee-logo{width:112px}
   .mee-brand *{animation:none!important;transition:none!important}
 }
 
+/* === 404 sayfası (404.html) === */
+.not-found{min-height:calc(100vh - 88px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:60px 0}
+.not-found h1{font-family:var(--display);font-size:clamp(44px,7vw,96px);font-weight:600;line-height:1.05;letter-spacing:-3px;margin:24px 0}
+.not-found p{max-width:460px;margin:0 0 32px;font-size:17px;line-height:1.8;color:var(--muted)}
+
 /* === Hareket: ekran dışındaki animasyonlar durur === */
 .is-offscreen,.is-offscreen *{animation-play-state:paused!important}
 
