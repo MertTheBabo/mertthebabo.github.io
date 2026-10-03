@@ -34,15 +34,7 @@ Bu siteyi hem kendimi tanıtmak hem de eğitim, deneyim ve kariyer yolculuğumu 
 
 Siteyi zaman içinde yeni projelerim, deneyimlerim ve öğrendiğim teknolojilerle güncellemeye devam edeceğim.
 
-### Yapay zekâ desteği
-
-Sitenin son iyileştirmelerini (erişilebilirlik, içerik düzeni, mobil uyum, SEO) Anthropic'in **Claude Code** aracıyla birlikte geliştirdim; bu yüzden bazı commit'lerde Claude ortak yazar olarak görünüyor.
-
-- Sitenin amacını, içeriğini ve konumlanmasını ben belirledim; sitedeki bilgiler kendi özgeçmişimden geliyor.
-- Değişiklikleri aşama aşama planladım; her aşamayı inceleyip onayladıktan sonra yayına aldım.
-- Çalışma kuralları [`CLAUDE.md`](CLAUDE.md), iyileştirme planı [`docs/IYILESTIRME-PLANI.md`](docs/IYILESTIRME-PLANI.md) dosyalarında.
-
-Yapay zekâ araçlarını verimli ve kontrollü kullanmak da geliştirmeye devam ettiğim becerilerden biri.
+Sitenin bazı iyileştirmelerinde yapay zekâ destekli bir kodlama aracından (Claude Code) yararlandım; içerik ve kararlar bana ait.
 
 ## İletişim
 
