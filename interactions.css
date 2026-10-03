@@ -3,7 +3,7 @@
 .linkedin-card .fx-spotlight{background:radial-gradient(260px circle at var(--fx-x,50%) var(--fx-y,50%),#65b8ff25,transparent 70%)}
 .fx-tilt{transform-style:preserve-3d;will-change:auto}
 .fx-tilt.is-hovered{will-change:transform}
-.button,.outline-button,.text-link,.github-strip,.focus-tags>span,.resume-tag,.resume-item,.theme-button,.motion-button,.avatar-initials{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,color .25s,background .35s}
+.button,.outline-button,.text-link,.github-strip,.focus-tags>li,.resume-tag,.resume-item,.theme-button,.motion-button,.avatar-initials{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,color .25s,background .35s}
 .button-primary,.outline-button{position:relative;overflow:hidden;isolation:isolate}
 .button-primary::before,.outline-button::before{content:'';position:absolute;inset:-60% -30%;background:linear-gradient(110deg,transparent 38%,#ffffff60 48%,transparent 58%);transform:translateX(-110%) skewX(-15deg);pointer-events:none;z-index:-1}
 .button-primary>span,.outline-button>span,.github-strip>span:last-child,.hero-foot>a>span{display:inline-block;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
@@ -22,7 +22,7 @@
  .text-link:hover::after{transform:scaleX(1)}
  html:not(.motion-paused) .github-strip:hover{transform:translateY(-4px);box-shadow:0 14px 35px #b5fa590e;border-color:var(--accent)}
  html:not(.motion-paused) .github-strip:hover>span:last-child{transform:translateX(6px)}
- html:not(.motion-paused) .focus-tags>span:hover,html:not(.motion-paused) .resume-tag:hover{transform:translateY(-5px) rotate(-2deg);border-color:var(--accent);color:var(--accent);box-shadow:0 7px 18px #b5fa5915}
+ html:not(.motion-paused) .focus-tags>li:hover,html:not(.motion-paused) .resume-tag:hover{transform:translateY(-5px) rotate(-2deg);border-color:var(--accent);color:var(--accent);box-shadow:0 7px 18px #b5fa5915}
  html:not(.motion-paused) .resume-item:hover{transform:translateX(5px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
  html:not(.motion-paused) .theme-button:hover,html:not(.motion-paused) .motion-button:hover{transform:rotate(12deg) scale(1.08);box-shadow:0 0 22px #b5fa5915}
  html:not(.motion-paused) .avatar-initials:hover{transform:rotate(-6deg) scale(1.08);box-shadow:0 8px 28px #b5fa5933}
@@ -31,7 +31,7 @@
 }
 @keyframes fxSweep{from{transform:translateX(-110%) skewX(-15deg)}to{transform:translateX(110%) skewX(-15deg)}}
 .motion-paused .fx-spotlight{display:none}.motion-paused .fx-tilt,.motion-paused .button,.motion-paused .outline-button,.motion-paused .text-link,.motion-paused .resume-item{transform:none!important}.motion-paused .button-primary::before,.motion-paused .outline-button::before{display:none}
-@media(prefers-reduced-motion:reduce){.fx-spotlight{display:none}.fx-tilt,.button,.outline-button,.text-link,.github-strip,.focus-tags>span,.resume-tag,.resume-item,.theme-button,.motion-button,.avatar-initials{transform:none!important}.button-primary::before,.outline-button::before{display:none}}
+@media(prefers-reduced-motion:reduce){.fx-spotlight{display:none}.fx-tilt,.button,.outline-button,.text-link,.github-strip,.focus-tags>li,.resume-tag,.resume-item,.theme-button,.motion-button,.avatar-initials{transform:none!important}.button-primary::before,.outline-button::before{display:none}}
 @media print{.fx-spotlight{display:none}}
 .fx-tap{position:relative;overflow:hidden;isolation:isolate}
 .fx-ripple{position:absolute;left:var(--tap-x);top:var(--tap-y);width:var(--tap-size);height:var(--tap-size);border-radius:50%;background:radial-gradient(circle,#b5fa5935,transparent 70%);transform:translate(-50%,-50%) scale(0);animation:fxRipple .6s ease-out forwards;pointer-events:none;z-index:2}

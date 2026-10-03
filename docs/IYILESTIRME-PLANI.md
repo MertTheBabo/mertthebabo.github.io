@@ -6,12 +6,12 @@ Kurallar için `CLAUDE.md`. Her maddeyi bitirince `[x]` yap. Etiketler: **[O]** 
 ---
 
 ## Mert'ten gereken bilgiler (Phase 2 başlamadan sor)
-- [ ] Hedef pozisyon: BT destek / sistem & bulut mu, junior yazılım geliştirici mi, ikisi mi? (Öneri: "BT/bulut ile başlayıp yazılıma ilerleyen")
-- [ ] Şehir ve çalışma tercihi (ör. Kocaeli · hibrit / uzaktan)
-- [ ] Gösterilecek 3 gerçek proje: ad, 1-2 cümle problem/çözüm, teknolojiler, GitHub/canlı link, varsa ekran görüntüsü
-- [ ] CV PDF dosyası (`cv/mert-erdem-elmaci-cv.pdf` olarak eklenecek)
-- [ ] E-posta sayfada görünür yazılsın mı? Telefon eklensin mi?
-- [ ] Profesyonel fotoğraf kullanılacak mı? (Phase 2.6 için)
+- [x] Hedef pozisyon: CV başlığıyla aynı — "Bilgisayar Programcısı | IT Destek · Sistem & Ağ · Yazılım"
+- [x] Şehir: Kocaeli (LinkedIn: iş yerinde · hibrit)
+- [ ] Gösterilecek 3 gerçek proje: ad, 1-2 cümle problem/çözüm, teknolojiler, GitHub/canlı link, varsa ekran görüntüsü — şimdilik yalnızca bu site (CV ve GitHub'daki tek proje)
+- [ ] CV PDF dosyası (`cv/mert-erdem-elmaci-cv.pdf`) — Ekim 2026 sürümü alındı; doğum tarihi/yeri, medeni durum, askerlik ve telefon içerdiği için yayın onayı bekliyor
+- [ ] E-posta sayfada görünür yazılsın mı? Telefon eklensin mi? — e-posta görünür yapıldı (CV'de zaten açık); telefon eklenmedi, karar bekliyor
+- [x] Profesyonel fotoğraf kullanılacak mı? — şimdilik hayır; 2.6'da "bir bakışta" listesi seçildi
 - [ ] FormSubmit aktivasyon e-postasındaki rastgele alias (Phase 1.7 için)
 
 ---
@@ -28,15 +28,15 @@ Kurallar için `CLAUDE.md`. Her maddeyi bitirince `[x]` yap. Etiketler: **[O]** 
 - **Kabul:** axe 0 ihlal (koyu/açık × 1440/390), Lighthouse a11y 100, LinkedIn Post Inspector'da önizleme görseli çıkıyor.
 
 ## Phase 2 — İçerik ve UI/UX (en yüksek etki)
-- [ ] 2.1 [Z] Hero: eyebrow "İŞ & STAJ FIRSATLARINA AÇIK · [ŞEHİR]"; h1 altına tek cümlelik `.hero-role` (hedef pozisyon); birincil CTA "Özgeçmişi indir (PDF)", ikincil "İletişime geç", sonra GitHub/LinkedIn
-- [ ] 2.2 [O] Yeni `#projeler` bölümü (Hakkımda'dan sonra), mevcut `.card` bileşeniyle; kart yapısı: etiket → başlık → problem/ne yaptım → teknoloji listesi (`<ul class="focus-tags">`) → Kaynak kod / Canlı linkleri. Görsel varsa WebP, `width`/`height`, `loading="lazy"`, anlamlı `alt`
-- [ ] 2.3 [O] Tekrarları kaldır: "03 / Yol Haritam" bölümünü sil (benzersiz bilgiyi Hakkımda'ya 1 satır olarak taşı); özgeçmişteki "PROFİL" ve "AKADEMİK & KARİYER HEDEFİ" maddelerini sil. DGS hedefi sayfada en fazla 1 kez geçsin
-- [ ] 2.4 [O] Yeni sıra ve nav: Hakkımda · Projeler · Deneyim · İletişim; bölüm numaralarını (01–04) ve `id`'leri güncelle; `section[id]` gözlemcisi yeni id'lerle çalışsın
-- [ ] 2.5 [O] Yetenekleri grupla (Diller / Altyapı & Bulut / Araçlar); HTML, CSS, JavaScript, Git & GitHub, Microsoft Azure (temel) ekle; "Bilgi teknolojisi", "Yazılım geliştirme", "Yapay zekâ" gibi alan adlarını kaldır
-- [ ] 2.6 [Z] Sağdaki yörünge kartı: monogram yerine `<dl class="glance">` (Durum / Odak / Son deneyim / Eğitim) ya da fotoğraf; yörünge arka planı ve animasyon kalsın
-- [ ] 2.7 [O] CV: `cv/` altındaki PDF'e `download` linki; e-posta görünür + "Kopyala" butonu (`navigator.clipboard`, `aria-live` ile "Kopyalandı")
-- [ ] 2.8 [O] Print CSS: kimlik kartı linklerinin URL'si yazılsın (`a::after{content:" — " attr(href)}`), "Eğitimden, deneyime." başlığı yazdırmada gizlensin, e-posta görünsün
-- [ ] 2.9 [O] `<title>` ve meta description yeni konumlanmaya göre; OG başlık/açıklama aynı; JSON-LD `jobTitle`/`knowsAbout` güncel; `og-image.png` metni değiştiyse yeniden üret
+- [x] 2.1 [Z] Hero: eyebrow "İŞ & STAJ FIRSATLARINA AÇIK · [ŞEHİR]"; h1 altına tek cümlelik `.hero-role` (hedef pozisyon); birincil CTA "Özgeçmişi indir (PDF)", ikincil "İletişime geç", sonra GitHub/LinkedIn
+- [x] 2.2 [O] Yeni `#projeler` bölümü (Hakkımda'dan sonra), mevcut `.card` bileşeniyle; kart yapısı: etiket → başlık → problem/ne yaptım → teknoloji listesi (`<ul class="focus-tags">`) → Kaynak kod / Canlı linkleri. Görsel varsa WebP, `width`/`height`, `loading="lazy"`, anlamlı `alt`
+- [x] 2.3 [O] Tekrarları kaldır: "03 / Yol Haritam" bölümünü sil (benzersiz bilgiyi Hakkımda'ya 1 satır olarak taşı); özgeçmişteki "PROFİL" ve "AKADEMİK & KARİYER HEDEFİ" maddelerini sil. DGS hedefi sayfada en fazla 1 kez geçsin
+- [x] 2.4 [O] Yeni sıra ve nav: Hakkımda · Projeler · Deneyim · İletişim; bölüm numaralarını (01–04) ve `id`'leri güncelle; `section[id]` gözlemcisi yeni id'lerle çalışsın
+- [x] 2.5 [O] Yetenekleri grupla (Diller / Altyapı & Bulut / Araçlar); HTML, CSS, JavaScript, Git & GitHub, Microsoft Azure (temel) ekle; "Bilgi teknolojisi", "Yazılım geliştirme", "Yapay zekâ" gibi alan adlarını kaldır
+- [x] 2.6 [Z] Sağdaki yörünge kartı: monogram yerine `<dl class="glance">` (Durum / Odak / Son deneyim / Eğitim) ya da fotoğraf; yörünge arka planı ve animasyon kalsın
+- [x] 2.7 [O] CV: `cv/` altındaki PDF'e `download` linki; e-posta görünür + "Kopyala" butonu (`navigator.clipboard`, `aria-live` ile "Kopyalandı")
+- [x] 2.8 [O] Print CSS: kimlik kartı linklerinin URL'si yazılsın (`a::after{content:" — " attr(href)}`), "Eğitimden, deneyime." başlığı yazdırmada gizlensin, e-posta görünsün
+- [x] 2.9 [O] `<title>` ve meta description yeni konumlanmaya göre; OG başlık/açıklama aynı; JSON-LD `jobTitle`/`knowsAbout` güncel; `og-image.png` metni değiştiyse yeniden üret
 - **Kabul:** Hero'ya bakan biri 5 sn'de rol, durum ve CV'ye ulaşabiliyor; mobil sayfa yüksekliği belirgin kısaldı (önce ~8.500px @390).
 
 ## Phase 3 — Responsive + erişilebilirlik
@@ -62,7 +62,7 @@ Kurallar için `CLAUDE.md`. Her maddeyi bitirince `[x]` yap. Etiketler: **[O]** 
 - **Kabul:** Görsel fark yok (önce/sonra ekran görüntüsü karşılaştır); Lighthouse performans ≥95 mobil; `css/main.css` mevcut 3 dosyanın toplamından küçük.
 
 ## Phase 5 — Polish
-- [ ] 5.1 [Z] Ticker'ı kaldır ya da yalnızca masaüstünde göster
+- [x] 5.1 [Z] Ticker'ı kaldır ya da yalnızca masaüstünde göster — ≤760px'te gizlendi (Phase 2)
 - [ ] 5.2 [Z] Proje kartı hover: ekran görüntüsü hafif yukarı kayar (`transform`)
 - [ ] 5.3 [Z] Aktif bölümün numarası (`01 /`) accent renge geçer (mevcut `aria-current` mantığını kullan)
 - [ ] 5.4 [Z] Tema değişiminde `document.startViewTransition` (destek yoksa normal geçiş, reduced-motion'da kapalı)

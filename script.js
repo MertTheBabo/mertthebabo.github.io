@@ -43,3 +43,19 @@ window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFr
 if(window.matchMedia('(pointer: fine)').matches&&!reduced.matches)document.querySelectorAll('.card').forEach(card=>card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mouse-x',e.clientX-r.left+'px');card.style.setProperty('--mouse-y',e.clientY-r.top+'px');}));
 document.getElementById('print-cv')?.addEventListener('click',()=>window.print());
 })();
+
+document.querySelectorAll('.copy-button').forEach(button => {
+  const status = button.parentElement.querySelector('.copy-status');
+  let timer;
+  button.addEventListener('click', async () => {
+    const text = button.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+      status.innerHTML = 'Kopyalandı <span aria-hidden="true">✓</span>';
+      clearTimeout(timer);
+      timer = setTimeout(() => { status.textContent = ''; }, 1500);
+    } catch {
+      location.href = 'mailto:' + text; // pano erişimi yoksa e-posta istemcisine düş
+    }
+  });
+});
