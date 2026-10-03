@@ -10,12 +10,9 @@
       button.setAttribute('aria-label', light ? 'Koyu temaya geç' : 'Açık temaya geç');
       button.setAttribute('aria-pressed', String(light));
     }
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#f5f7f1' : '#101211');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#f3f6f1' : '#090d0c');
   }
-  try {
-    const saved = localStorage.getItem('mert-theme');
-    if (saved === 'light' || saved === 'dark') setTheme(saved);
-  } catch {}
+  setTheme(root.dataset.theme === 'light' ? 'light' : 'dark'); // tema <head> içinde belirlendi; burada yalnızca buton/meta senkronize edilir
   button?.addEventListener('click', () => {
     const theme = root.dataset.theme === 'light' ? 'dark' : 'light';
     setTheme(theme);
