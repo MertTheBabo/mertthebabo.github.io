@@ -14,13 +14,13 @@ Bu siteyi hem kendimi tanıtmak hem de eğitim, deneyim ve kariyer yolculuğumu 
 
 ## Sitede Neler Var?
 
-- Hakkımda
-- Eğitim bilgilerim
-- İş ve staj deneyimlerim
-- Teknik yetkinliklerim
-- Sertifikalarım
-- Kariyer hedeflerim
-- GitHub ve LinkedIn bağlantılarım
+- Hakkımda ve kariyer hedeflerim
+- Projelerim
+- İş ve staj deneyimlerim, eğitim bilgilerim
+- Teknik yetkinliklerim, sertifikalarım ve dillerim
+- İndirilebilir özgeçmiş (PDF)
+- İletişim formu, GitHub ve LinkedIn bağlantılarım
+- Koyu/açık tema, klavye ve ekran okuyucu desteği
 
 ## Kullanılan Teknolojiler
 
@@ -33,6 +33,16 @@ Bu siteyi hem kendimi tanıtmak hem de eğitim, deneyim ve kariyer yolculuğumu 
 ## Geliştirme
 
 Siteyi zaman içinde yeni projelerim, deneyimlerim ve öğrendiğim teknolojilerle güncellemeye devam edeceğim.
+
+### Yapay zekâ desteği
+
+Sitenin son iyileştirmelerini (erişilebilirlik, içerik düzeni, mobil uyum, SEO) Anthropic'in **Claude Code** aracıyla birlikte geliştirdim; bu yüzden bazı commit'lerde Claude ortak yazar olarak görünüyor.
+
+- Sitenin amacını, içeriğini ve konumlanmasını ben belirledim; sitedeki bilgiler kendi özgeçmişimden geliyor.
+- Değişiklikleri aşama aşama planladım; her aşamayı inceleyip onayladıktan sonra yayına aldım.
+- Çalışma kuralları [`CLAUDE.md`](CLAUDE.md), iyileştirme planı [`docs/IYILESTIRME-PLANI.md`](docs/IYILESTIRME-PLANI.md) dosyalarında.
+
+Yapay zekâ araçlarını verimli ve kontrollü kullanmak da geliştirmeye devam ettiğim becerilerden biri.
 
 ## İletişim
 
