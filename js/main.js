@@ -20,7 +20,9 @@
   setTheme(root.dataset.theme === 'light' ? 'light' : 'dark'); // tema <head> içinde belirlendi; burada yalnızca buton/meta senkronize edilir
   button?.addEventListener('click', () => {
     const theme = root.dataset.theme === 'light' ? 'dark' : 'light';
-    setTheme(theme);
+    const calm = matchMedia('(prefers-reduced-motion: reduce)').matches || root.classList.contains('motion-paused');
+    if (document.startViewTransition && !calm) document.startViewTransition(() => setTheme(theme));
+    else setTheme(theme);
     try { localStorage.setItem('mert-theme', theme); } catch {}
   });
 })();
@@ -44,7 +46,7 @@ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
 if('IntersectionObserver' in window){
  const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');reveal.unobserve(e.target);}}),{threshold:.08});
  if(!reduced.matches)document.querySelectorAll('.about-main,.section-heading,.card,.contact-row').forEach(el=>{el.classList.add('reveal-ready');reveal.observe(el);});
- const sections=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)nav?.querySelectorAll('a').forEach(a=>{if(a.hash==='#'+e.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}),{rootMargin:'-20% 0px -55% 0px'});
+ const sections=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('section[id]').forEach(s=>s.classList.toggle('is-current',s===e.target));if(e.isIntersecting)nav?.querySelectorAll('a').forEach(a=>{if(a.hash==='#'+e.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}),{rootMargin:'-20% 0px -55% 0px'});
  document.querySelectorAll('section[id]').forEach(el=>sections.observe(el));
 }
 const progress=document.querySelector('.reading-progress'),back=document.querySelector('.back-top');let queued=false;

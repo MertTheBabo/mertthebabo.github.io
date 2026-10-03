@@ -582,6 +582,19 @@ footer .mee-logo{width:112px}
   .mee-brand *{animation:none!important;transition:none!important}
 }
 
+/* === Phase 5: proje görseli, aktif bölüm numarası === */
+.project-shot{margin:0}
+.project-shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 45px #0003;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+@media (min-width:901px){
+  .project-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);column-gap:44px;row-gap:24px;align-items:start}
+  .project-card>*{grid-column:1}
+  .project-card>.project-shot{grid-column:2;grid-row:1/span 3;align-self:center}
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  html:not(.motion-paused) .project-card:hover .project-shot img{transform:translateY(-8px)}
+}
+.section.is-current>.eyebrow,.section.is-current .section-heading .eyebrow,.section.is-current .section-marker>span:first-child{color:var(--accent)}
+
 /* === 404 sayfası (404.html) === */
 .not-found{min-height:calc(100vh - 88px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:60px 0}
 .not-found h1{font-family:var(--display);font-size:clamp(44px,7vw,96px);font-weight:600;line-height:1.05;letter-spacing:-3px;margin:24px 0}
