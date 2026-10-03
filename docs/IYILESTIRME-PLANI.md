@@ -9,8 +9,8 @@ Kurallar için `CLAUDE.md`. Her maddeyi bitirince `[x]` yap. Etiketler: **[O]** 
 - [x] Hedef pozisyon: CV başlığıyla aynı — "Bilgisayar Programcısı | IT Destek · Sistem & Ağ · Yazılım"
 - [x] Şehir: Kocaeli (LinkedIn: iş yerinde · hibrit)
 - [ ] Gösterilecek 3 gerçek proje: ad, 1-2 cümle problem/çözüm, teknolojiler, GitHub/canlı link, varsa ekran görüntüsü — şimdilik yalnızca bu site (CV ve GitHub'daki tek proje)
-- [ ] CV PDF dosyası (`cv/mert-erdem-elmaci-cv.pdf`) — Ekim 2026 sürümü alındı; doğum tarihi/yeri, medeni durum, askerlik ve telefon içerdiği için yayın onayı bekliyor
-- [ ] E-posta sayfada görünür yazılsın mı? Telefon eklensin mi? — e-posta görünür yapıldı (CV'de zaten açık); telefon eklenmedi, karar bekliyor
+- [x] CV PDF dosyası (`cv/mert-erdem-elmaci-cv.pdf`) — Ekim 2026 sürümü; Mert olduğu gibi yayınlanmasını onayladı
+- [x] E-posta sayfada görünür yazılsın mı? Telefon eklensin mi? — e-posta görünür; telefon sayfaya eklenmeyecek (Mert'in kararı)
 - [x] Profesyonel fotoğraf kullanılacak mı? — şimdilik hayır; 2.6'da "bir bakışta" listesi seçildi
 - [ ] FormSubmit aktivasyon e-postasındaki rastgele alias (Phase 1.7 için)
 
