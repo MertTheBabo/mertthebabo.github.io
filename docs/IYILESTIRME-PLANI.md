@@ -40,12 +40,12 @@ Kurallar için `CLAUDE.md`. Her maddeyi bitirince `[x]` yap. Etiketler: **[O]** 
 - **Kabul:** Hero'ya bakan biri 5 sn'de rol, durum ve CV'ye ulaşabiliyor; mobil sayfa yüksekliği belirgin kısaldı (önce ~8.500px @390).
 
 ## Phase 3 — Responsive + erişilebilirlik
-- [ ] 3.1 [O] ≤760px: hero birincil buton tam genişlik; metin linkleri, tema/menü/duraklatma butonları ≥44px dokunma alanı
-- [ ] 3.2 [O] Mobil menü: açılınca ilk linke odak, Esc/kapatınca odak menü butonuna dönsün
-- [ ] 3.3 [O] Tema butonu açık temada ay ikonu göstersin; duraklatma butonunda "Ⅱ" yerine SVG pause/play ikonu
-- [ ] 3.4 [O] Animasyon duraklatma tercihi localStorage'da saklansın (tema gibi, try/catch ile)
-- [ ] 3.5 [O] Açık temada `.identity-art .status-dot` görünür olsun (`background:#b5fa59`)
-- [ ] 3.6 [O] `.certificate-row` ≤760px'te alt alta (tarih başlığın altında)
+- [x] 3.1 [O] ≤760px: hero birincil buton tam genişlik; metin linkleri, tema/menü/duraklatma butonları ≥44px dokunma alanı
+- [x] 3.2 [O] Mobil menü: açılınca ilk linke odak, Esc/kapatınca odak menü butonuna dönsün
+- [x] 3.3 [O] Tema butonu açık temada ay ikonu göstersin; duraklatma butonunda "Ⅱ" yerine SVG pause/play ikonu
+- [x] 3.4 [O] Animasyon duraklatma tercihi localStorage'da saklansın (tema gibi, try/catch ile)
+- [x] 3.5 [O] Açık temada `.identity-art .status-dot` görünür olsun (`background:#b5fa59`)
+- [x] 3.6 [O] `.certificate-row` ≤760px'te alt alta (tarih başlığın altında)
 - **Kabul:** 360/390/768/1024/1440px'te taşma yok; klavyeyle tüm etkileşimler çalışıyor.
 
 ## Phase 4 — Performans + kod yapısı

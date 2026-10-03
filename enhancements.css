@@ -31,7 +31,6 @@ p.animated-intro{margin-top:0}
 .glance>div+div{padding-top:10px;border-top:1px solid #2c4135}
 .glance dt{font-family:var(--display);font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#b0c2b6}
 .glance dd{margin:0;display:flex;align-items:center;gap:8px;font-size:15px;font-weight:600;line-height:1.45;color:#e7f4e9}
-.glance .status-dot{background:#b5fa59}
 .badge-a{top:64px}
 .badge-b{bottom:72px}
 .project-cards{grid-template-columns:1fr}
@@ -66,3 +65,21 @@ p.animated-intro{margin-top:0}
 @media(max-width:760px){.identity-art{height:400px}.hero-actions{gap:12px 28px}.hero-actions .button,.hero-actions .outline-button{width:100%;justify-content:space-between;padding:16px 22px}.hero-actions .text-link{min-height:44px}.email-link{font-size:16px}.ticker{display:none}.resume-identity>a{margin-top:14px}.resume-identity>.resume-tag+a{margin-top:22px}.project-card p{font-size:14px}}
 @media(max-width:380px){.identity-art{height:400px}.glance{padding:16px 18px}.glance dd{font-size:14px}}
 @media print{.resume .section-heading h2,.resume-download{display:none!important}.resume-identity>a{margin-top:6px}.resume-identity a[href^="http"]::after{content:" — " attr(href);font-size:9pt;color:#555;word-break:break-all}.focus-tags>li{border-color:#bbb;padding:4px 9px;font-size:10pt}}
+
+/* Phase 3: dokunma hedefleri, ikonlar, kart noktası, sertifika satırları */
+.motion-button svg{display:block;width:14px;height:14px;margin:auto;fill:currentColor}
+.motion-button .icon-play,.theme-button .icon-moon{display:none}
+.motion-button[aria-pressed=true] .icon-pause{display:none}
+.motion-button[aria-pressed=true] .icon-play{display:block}
+:root[data-theme=light] .theme-button .icon-sun{display:none}
+:root[data-theme=light] .theme-button .icon-moon{display:block}
+.identity-art .status-dot{background:#b5fa59}
+@media(max-width:760px){
+.theme-button,.menu-button,.motion-button{width:44px;height:44px}
+.wordmark,.hero-foot>a,footer>a:last-child{min-height:44px;display:inline-flex;align-items:center}
+.resume-identity>a{display:flex;align-items:center;min-height:44px;margin-top:4px}
+.resume-identity>.resume-tag+a{margin-top:16px}
+.contact-socials>.text-link{min-height:44px;margin-top:8px}
+.certificate-row{flex-direction:column;align-items:flex-start;gap:2px}
+.certificate-row>span{margin-bottom:0;white-space:normal}
+}
