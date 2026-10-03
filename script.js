@@ -7,7 +7,9 @@
     root.dataset.theme = theme;
     const light = theme === 'light';
     if (button) {
-      button.setAttribute('aria-label', light ? 'Koyu temaya geç' : 'Açık temaya geç');
+      const label = light ? 'Koyu temaya geç' : 'Açık temaya geç';
+      button.setAttribute('aria-label', label);
+      button.title = label;
       button.setAttribute('aria-pressed', String(light));
     }
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#f3f6f1' : '#090d0c');
@@ -24,12 +26,17 @@
 const root = document.documentElement;
 const nav = document.getElementById('main-nav');
 const menu = document.querySelector('.menu-button');
-function closeMenu(){nav?.classList.remove('menu-open'); menu?.setAttribute('aria-expanded','false'); menu?.setAttribute('aria-label','Menüyü aç');}
-menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Menüyü kapat':'Menüyü aç');nav?.classList.toggle('menu-open',open);});
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+const isOpen=()=>menu?.getAttribute('aria-expanded')==='true';
+function closeMenu(returnFocus){if(!isOpen())return;nav?.classList.remove('menu-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Menüyü aç');if(returnFocus)menu.focus();}
+function openMenu(){menu.setAttribute('aria-expanded','true');menu.setAttribute('aria-label','Menüyü kapat');nav?.classList.add('menu-open');nav?.querySelector('a')?.focus();}
+menu?.addEventListener('click',()=>isOpen()?closeMenu(true):openMenu());
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMenu(false)));
+nav?.addEventListener('focusout',e=>{if(!e.relatedTarget||!e.relatedTarget.closest('#main-nav,.menu-button'))closeMenu(false);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu(true);});
 const motion=document.querySelector('.motion-button');
-motion?.addEventListener('click',()=>{const paused=root.classList.toggle('motion-paused');motion.setAttribute('aria-pressed',String(paused));motion.setAttribute('aria-label',paused?'Animasyonları sürdür':'Animasyonları duraklat');motion.querySelector('span').textContent=paused?'▷':'Ⅱ';});
+function setMotion(paused){root.classList.toggle('motion-paused',paused);if(!motion)return;const label=paused?'Animasyonları sürdür':'Animasyonları duraklat';motion.setAttribute('aria-pressed',String(paused));motion.setAttribute('aria-label',label);motion.title=label;}
+setMotion(root.classList.contains('motion-paused')); // tercih <head> içinde uygulandı; burada buton senkronize edilir
+motion?.addEventListener('click',()=>{const paused=!root.classList.contains('motion-paused');setMotion(paused);try{localStorage.setItem('mert-motion',paused?'paused':'running');}catch{}});
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
 if('IntersectionObserver' in window){
  const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');reveal.unobserve(e.target);}}),{threshold:.08});

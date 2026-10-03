@@ -2,7 +2,7 @@
 <html lang="tr" data-theme="dark">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#090d0c">
-<script>(()=>{let t;try{t=localStorage.getItem('mert-theme')}catch{}if(t!=='light'&&t!=='dark')t='dark';document.documentElement.dataset.theme=t})();</script>
+<script>(()=>{const r=document.documentElement;let t,m;try{t=localStorage.getItem('mert-theme');m=localStorage.getItem('mert-motion')}catch{}if(t!=='light'&&t!=='dark')t='dark';r.dataset.theme=t;if(m==='paused')r.classList.add('motion-paused')})();</script>
 <meta name="description" content="Mert Erdem Elmacı — ESTÜ Bilgisayar Programcılığı mezunu, Ford Otosan BT stajyeri. IT destek, sistem &amp; ağ ve yazılım alanlarında iş fırsatlarına açık. Kocaeli.">
 <title>Mert Erdem Elmacı — IT Destek, Sistem &amp; Ağ ve Yazılım | Bilgisayar Programcısı</title>
 <link rel="canonical" href="https://mertthebabo.github.io/">
@@ -21,7 +21,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mert Erdem Elmacı","url":"https://mertthebabo.github.io/","jobTitle":"Bilgisayar Programcısı","address":{"@type":"PostalAddress","addressLocality":"Kocaeli","addressCountry":"TR"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Eskişehir Teknik Üniversitesi"},"knowsAbout":["IT destek","Donanım ve arıza tespiti","Windows","İşletim sistemleri","Bilgisayar ağları","C#","C++","Python","HTML","CSS","JavaScript","Git","GitHub"],"sameAs":["https://github.com/MertTheBabo","https://www.linkedin.com/in/mert-erdem-elmac%C4%B1-83bb87357/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Space+Grotesk:wght@400..700&display=swap">
-<link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="enhancements.css?v=2"><script src="script.js?v=2" defer></script><link rel="stylesheet" href="interactions.css?v=2"><script src="interactions.js?v=2" defer></script>
+<link rel="stylesheet" href="style.css?v=3"><link rel="stylesheet" href="enhancements.css?v=3"><script src="script.js?v=3" defer></script><link rel="stylesheet" href="interactions.css?v=2"><script src="interactions.js?v=2" defer></script>
 <style>
 .message-panel{margin-top:64px;padding:40px;border:1px solid #59664c55;border-radius:24px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;background:linear-gradient(135deg,#a5fa5909,transparent)}
 .message-intro h3{font-size:clamp(28px,3vw,40px);line-height:1.15;margin:20px 0}.message-intro p{line-height:1.7;opacity:.7;margin:0 0 24px}
@@ -41,8 +41,8 @@
 <header class="header">
 <a class="wordmark mee-brand" href="#" aria-label="MEE — Mert Erdem Elmacı, başlangıç"><svg class="mee-logo" viewBox="0 0 162 60" fill="currentColor" aria-hidden="true" focusable="false"><path class="mee-letter" d="M6 42V10h9l14 19 14-19h9v32h-9V25L29 44 15 25v17Z"/><path class="mee-letter mee-e" d="M64 10h31v8H73v5h19v8H73v5h22v8H64Z"/><path class="mee-letter" d="M105 10h31v8h-22v5h19v8h-19v5h22v8h-31Z"/><path class="mee-cursor" d="M145 35h9v9h-9Z"/><path class="mee-rail" d="M6 52h94l7-5h47" fill="none" stroke-width="2"/><circle class="mee-node" cx="6" cy="52" r="2.5"/></svg></a>
 <nav id="main-nav" aria-label="Ana menü"><a href="#hakkimda">Hakkımda</a><a href="#projeler">Projeler</a><a href="#deneyim">Deneyim</a><a href="#iletisim">İletişim</a></nav>
-<button class="motion-button" type="button" aria-pressed="false" aria-label="Animasyonları duraklat"><span aria-hidden="true">Ⅱ</span></button>
-<button class="theme-button" type="button" aria-label="Açık temaya geç" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+<button class="motion-button" type="button" aria-pressed="false" aria-label="Animasyonları duraklat" title="Animasyonları duraklat"><svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg><svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 2.8v10.4a.8.8 0 0 0 1.2.7l8.3-5.2a.8.8 0 0 0 0-1.4L5.7 2.1a.8.8 0 0 0-1.2.7Z"/></svg></button>
+<button class="theme-button" type="button" aria-label="Açık temaya geç" title="Açık temaya geç" aria-pressed="false"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg></button>
 <button class="menu-button" type="button" aria-label="Menüyü aç" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
 </header>
 <main id="main">
