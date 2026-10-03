@@ -12,18 +12,18 @@ Kurallar için `CLAUDE.md`. Her maddeyi bitirince `[x]` yap. Etiketler: **[O]** 
 - [ ] CV PDF dosyası (`cv/mert-erdem-elmaci-cv.pdf` olarak eklenecek)
 - [ ] E-posta sayfada görünür yazılsın mı? Telefon eklensin mi?
 - [ ] Profesyonel fotoğraf kullanılacak mı? (Phase 2.6 için)
-- [ ] FormSubmit aktivasyon e-postasındaki rastgele alias (Phase 1.6 için)
+- [ ] FormSubmit aktivasyon e-postasındaki rastgele alias (Phase 1.7 için)
 
 ---
 
 ## Phase 1 — Kritik sorunlar
-`p0-duzeltmeler.patch` ile 1.1–1.5 uygulanmış olmalı; doğrula.
-- [ ] 1.1 [O] `.button{border:0;cursor:pointer}` — "Mesaj gönder" butonundaki tarayıcı varsayılan kenarlığı yok
-- [ ] 1.2 [O] Form kenarlığı `var(--field-border)`, odak `var(--accent)`, durum mesajları `var(--danger)`/`var(--success)` — iki temada ≥3:1 / ≥4.5:1
-- [ ] 1.3 [O] `.ticker` → `aria-hidden="true"`; `.animated-intro` → `<p>` + `.visually-hidden` metin; header "İletişim ↗" → "İletişim"; link içi oklar `aria-hidden`
-- [ ] 1.4 [O] Tema `<head>` içindeki inline script ile ilk boyamadan önce uygulanıyor (açık tema flaşı yok); `script.js` yalnızca senkronize ediyor
-- [ ] 1.5 [O] Font `@import` kaldırıldı → `preconnect` + `<link>`; canonical, OG, Twitter card, JSON-LD Person, apple-touch-icon, robots.txt, sitemap.xml, og-image.png
-- [ ] 1.6 [O] Tüm `target="_blank"` linklere "(yeni sekmede açılır)" görünmez metni (hero, özgeçmiş kimlik kartı, GitHub şeridi, iletişim, FormSubmit linki)
+1.1–1.5 `66f372e` commit'inde uygulandı; 3 Ekim 2026'da doğrulandı (axe 0 ihlal: koyu/açık × 1440/390, Lighthouse a11y 100).
+- [x] 1.1 [O] `.button{border:0;cursor:pointer}` — "Mesaj gönder" butonundaki tarayıcı varsayılan kenarlığı yok
+- [x] 1.2 [O] Form kenarlığı `var(--field-border)`, odak `var(--accent)`, durum mesajları `var(--danger)`/`var(--success)` — iki temada ≥3:1 / ≥4.5:1
+- [x] 1.3 [O] `.ticker` → `aria-hidden="true"`; `.animated-intro` → `<p>` + `.visually-hidden` metin; header "İletişim ↗" → "İletişim"; link içi oklar `aria-hidden`
+- [x] 1.4 [O] Tema `<head>` içindeki inline script ile ilk boyamadan önce uygulanıyor (açık tema flaşı yok); `script.js` yalnızca senkronize ediyor
+- [x] 1.5 [O] Font `@import` kaldırıldı → `preconnect` + `<link>`; canonical, OG, Twitter card, JSON-LD Person, apple-touch-icon, robots.txt, sitemap.xml, og-image.png
+- [x] 1.6 [O] Tüm `target="_blank"` linklere "(yeni sekmede açılır)" görünmez metni (hero, özgeçmiş kimlik kartı, GitHub şeridi, iletişim, FormSubmit linki)
 - [ ] 1.7 [O] FormSubmit `action` ve `fetch` URL'lerinde e-posta yerine alias (Mert alias'ı verince)
 - **Kabul:** axe 0 ihlal (koyu/açık × 1440/390), Lighthouse a11y 100, LinkedIn Post Inspector'da önizleme görseli çıkıyor.
 
